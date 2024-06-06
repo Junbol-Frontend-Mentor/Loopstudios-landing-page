@@ -107,19 +107,18 @@ header {
 
   &__logoMenuHam_wrapper {
     width: 100%;
-    height: 5rem; //🚩I has been added and give a height of 5 so it doesn't affect the slogan on desktop
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem; //🚩This was the solution to push the hamburger away from the right border
-    background-color: color('black-transp');
+    //background-color: darkolivegreen;
   }
   &__logoTop {
     width: 4rem;
   }
   &__menuContainer {
-    width: 100%;
+    width: auto;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     //background-color: blueviolet;
   }
 
@@ -267,9 +266,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 1rem;
-    z-index: 2;
+    z-index: 6;
     margin: 8rem auto; //🚩 the first value is the one pushing the slogan down
     //margin: 16rem auto; //🚩 the first value is the one pushing the slogan down
     border: 3px solid color('white');
@@ -528,7 +526,7 @@ header {
   flex-direction: column;
   text-align: center;
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top:2rem;
   background-color: color('black');
   //background-color:rgb(112, 3, 112);
   &__logoPlusBottomNav {
@@ -646,84 +644,94 @@ header {
 }
 
 //------ MEDIA QUERY FOR DESKTOPS AND TABLETS ----------------
-//------ MEDIA QUERY FOR DESKTOPS AND TABLETS ----------------
 
 @media (min-width: 768px) {
   .navTop_container {
+    width: 100%;
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+
     &__navMenu {
-      width: 30rem; // ✅ Adjust width to auto for desktop
-      top: 0.5rem; // ✅ Reset top for desktop
-      position: relative; // ✅ Override the position for desktop view
-      margin-right: 2rem;
+      width: 60rem;
+      height: 1rem;
+      top: 1.5rem;
+      left: 20;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-left: 10rem;
+      z-index: 3;
+      transition: transform 0.7s ease;
     }
 
     ul {
+      width: 50rem;
       display: flex; // ✅ Ensure ul uses flexbox
-      justify-content: space-between;
+      flex-direction: row; // ✅ Ensure ul items are in a row
+      color: color('white');
+      list-style: none;
+      padding: 0; // ✅ Ensure no default padding
     }
-
     li {
+      width: 8rem;
+      height: 2rem;
+      display: flex;
+  
+      @include typography('Josefin Sans', 400, 1rem, 2, color('white'));
       border: none;
-      background-color: transparent; //✅🚩this fixed it.
+      //position:absolute;
+      background-color: color('black-transp');
+      transition: position 4s ease;
+      //background-color: dimgray;
+   
     }
-
     &__hamburgerClassIcon {
-      display: none; // ✅ Hide the hamburger icon on desktop
-    }
-    &__slogan {
-      width: 30rem;
-      height: 20rem;
-      margin: 6rem auto; //🚩 the first value is the one pushing the slogan down
-      @include typography('Josefin Sans', 350, 2.5rem, 1.5, color('white'));
-      //background-color: darkgreen;
-      &:hover {
-        width: 35rem;
-      }
+      display:none; //❓
     }
   }
   .navBottom_container {
     width: 100%;
     height: 10rem;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
-    margin-top: 2rem;
-    background-color: color('black');
-    background-color: rgb(80, 38, 80);
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem;
+    //background-color: color('black');
     &__logoPlusBottomNav {
-      width: 28rem;
-      height: auto;
+      width: 22rem;
+      height: 6rem;
       display: flex;
-      margin: 0;
-      margin-left: 1rem;
+      //margin: 0 auto;
       flex-direction: column;
-      align-items: left;
-      background-color: rgb(112, 94, 94);
+      align-items:left;
+      text-align: left;
     }
     &__logoBottom {
-      width: 13rem;
-      //margin-top: 1rem;
+      width: 100%;
+      margin-top: 1rem;
       text-align: left;
-      margin: 0;
-      margin-bottom: 0.5rem;
-      background-color: goldenrod;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      //background-color: goldenrod;
     }
-
+  
     &__navMenuBottom {
-      width: 25rem;
-      height: 3rem;
+      width: 100%;
+      height: 10rem;
       display: flex;
-      margin: 0;
-      background-color: rgb(6, 223, 6);
+      flex-direction: row;
+      //background-color: darkseagreen;
     }
     ul {
-      width: 100%;
+      width: 30rem;
       display: flex;
       flex-direction: row;
       list-style: none;
       justify-content: space-between;
       @include typography('Josefin Sans', 500, 1rem, 2, color('white'));
-      background-color: rgb(78, 82, 78);
+      //background-color: darkgreen;
       li {
         &:hover {
           color: color('fuchsia');
@@ -731,26 +739,31 @@ header {
       }
     }
     &__socialMediaIcons_container {
-      width: 15rem;
-      height: 4rem;
+      width: 18rem;
+      height: 6rem;
       display: flex;
       flex-direction: column;
-      //align-items: center;
-      margin-right: 1rem;
-      color: white;
-      background-color: darkgreen;
+      align-items: center;
     }
     &__socialMediaIcons {
+      width: 15rem;
+      height: 2rem;
       display: flex;
       justify-content: space-between; // White border
-      margin-top: 0.3rem;
-      //margin-bottom: 1rem;
-      //background-color: coral;
+ 
     }
-
+  
     &__link {
       width: 30px; // Set the size of the clickable area
       height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white; // White border
+      border-radius: 50%; // Circular border
+      color: white; // Icon color
+      text-decoration: none; // Removes underline from links
+      transition: transform 0.5s ease;
       &:hover {
         color: color('light-grayish-green'); // Light grey on hover
         border-color: #ccc; // Border color matches hover color
@@ -763,10 +776,13 @@ header {
         }
       }
     }
-
+  
     &__rights {
       margin: 0 auto;
       @include typography('Alata', 400, 0.7rem, 1.5, color('white'));
     }
   }
 }
+
+/////////////////------ NOTES --------///////////////////////////
+//🛠
