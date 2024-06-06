@@ -247,7 +247,7 @@ header {
   //=============================================================
 
   //========================================
-// ------- MAGIC ----------------------------
+  // ------- MAGIC ----------------------------
   //----------- Animation  ---------------
   @keyframes float {
     0% {
@@ -378,7 +378,8 @@ header {
     @include typography('Josefin Sans', 500, 1rem, 1.5, color('black'));
     transition: transform 0.7s ease;
     //background-color: aqua;
-    &:hover , &:focus {
+    &:hover,
+    &:focus {
       color: color('white');
       border-radius: 5px;
       background-color: color('fuchsia');
@@ -388,7 +389,43 @@ header {
   }
 }
 
-.creationsContainer {
+.cardsContainer {
+  width: 100%;
+  margin: 0 auto;
+  //background-color: cornflowerblue;
+}
+
+// ----- Grid Container ----------------------------
+.creationsGridContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); // 🟢 Responsive columns
+  grid-gap: 20px;
+  //background-color: darkseagreen;
+
+  &__card {
+    width: 100%;
+    height: 10rem;
+    color: color('white');
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    transition: transform 0.7s ease;
+    background-color: color('black');
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .hide {
+    display: none; // ✅ Hide elements with the .hide class
+  }
+
+  &__cardTitle {
+    @include typography('Josefin Sans', 300, 1.5rem, 1, color('white'));
+  }
+
+
   &__deepEarth {
     background-image: url(../assets/images/mobile/image-deep-earth.jpg);
     background-size: cover;
@@ -426,17 +463,6 @@ header {
     }
   }
 
-  &__extraCards {
-    height: 0; // Hidden height
-    opacity: 0; // Hidden opacity
-    overflow: hidden; // Ensures content does not overflow when hidden
-    transition: height 0.7s ease, opacity 0.7s ease; // Transition for height and opacity
-  }
-
-  &__extraCards--visible {
-    height: auto; // Visible height
-    opacity: 1; // Visible opacity
-  }
 
   &__fromAbove {
     background-image: url(../assets/images/mobile/image-from-above.jpg);
@@ -487,26 +513,7 @@ header {
       transform: scale(1.02);
     }
   }
-
-  &__card {
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 2rem;
-    padding-left: 2rem;
-    padding-bottom: 1rem;
-    transition: transform 0.7s ease;
-    background-color: color('black');
-  }
-  &__cardTitle {
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-    @include typography('Josefin Sans', 300, 1.5rem, 1, color('white'));
-    //background-color: darkslategrey;
-  }
-
+  
   &__grid {
     background-image: url(../assets/images/mobile/image-grid.jpg);
     background-size: cover;
@@ -519,7 +526,10 @@ header {
       transform: scale(1.02);
     }
   }
+
 }
+
+
 
 .navBottom_container {
   width: 100%;
@@ -621,8 +631,6 @@ header {
   }
 }
 
-
-
 //------   FOOTER    ----------------
 
 .attribution {
@@ -643,8 +651,10 @@ header {
   text-decoration: none;
 }
 
-
 //------ MEDIA QUERY FOR DESKTOPS AND TABLETS ----------------
+
+
+
 
 @media (min-width: 768px) {
   .navTop_container {
@@ -679,6 +689,99 @@ header {
       }
     }
   }
+
+  .cardsContainer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    //margin: 0 auto;
+  }
+
+
+  //--== Grid Container -------------------------
+  .creationsGridContainer {
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr); // 🟢 Create a grid with 4 columns for desktop
+
+    &.expanded { // 🟢 New class for when all items are shown
+      grid-template-columns: repeat(4, 1fr); // 🟢 Maintain the 4-column layout
+      //grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); // 🟢 Responsive columns
+    }
+
+
+    &.collapsed { // 🟢 New class for when only the first 3 items are shown
+      grid-template-columns: repeat(4, 1fr); // 🟢 Use 3 columns for 3 items
+    }
+
+    &__cardTitle {
+      width: 100%;
+      @include typography('Josefin Sans', 300, 1.5rem, 1, color('white'));
+      background-color: color('black-transp');
+      padding: 1rem;
+    }
+
+    &__card {
+      width: 100%;
+      min-height: 15rem;
+      max-height: 30rem;
+      color: color('white');
+      display: flex;
+      align-items: flex-end;
+      transition: transform 0.7s ease;
+      background-color: color('black');
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+    &__deepEarth {
+      background-image: url(../assets/images/desktop/image-deep-earth.jpg);
+      background-size: cover;
+      background-size: 100%; // Zoom out the image
+    }
+    &__nightArcade {
+      background-image: url(../assets/images/desktop/image-night-arcade.jpg);
+      background-size: cover;
+      background-size: 100%; // Zoom out the image
+    }
+    &__soccerTeam {
+      background-image: url(../assets/images/desktop/image-soccer-team.jpg);
+      background-size: cover;
+      background-size: 100%; // Zoom out the image
+    }
+  
+  
+    &__fromAbove {
+      background-image: url(../assets/images/desktop/image-from-above.jpg);
+      background-size: cover;
+      background-size: 80%; // Zoom out the image
+    }
+    &__pocket {
+      background-image: url(../assets/images/desktop/image-pocket-borealis.jpg);
+      background-size: cover;
+      background-size: 100%; // Zoom out the image
+    }
+    &__curiosity {
+      background-image: url(../assets/images/desktop/image-curiosity.jpg);
+      background-size: cover;
+      background-size: 100%; // Zoom out the image
+    }
+  
+    &__makeIt {
+      background-image: url(../assets/images/desktop/image-fisheye.jpg);
+      background-size: cover;
+      background-size: 100%; // Zoom out the image
+    }
+    
+    &__grid {
+      background-image: url(../assets/images/desktop/image-grid.jpg);
+      background-size: cover;
+      background-size: 100%; // Zoom out the image
+    }
+  }
+
+
+  //----------------------------------------------
+
   .navBottom_container {
     width: 100%;
     height: 8rem;
@@ -695,7 +798,6 @@ header {
       flex-direction: column;
       align-items: left;
       text-align: left;
-
     }
     &__logoBottom {
       width: 100%;

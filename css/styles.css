@@ -317,7 +317,41 @@ header {
   border: 3px solid;
 }
 
-.creationsContainer__deepEarth {
+.cardsContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.creationsGridContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  grid-gap: 20px;
+}
+.creationsGridContainer__card {
+  width: 100%;
+  height: 10rem;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  transition: transform 0.7s ease;
+  background-color: hsl(0, 0%, 0%);
+}
+.creationsGridContainer__card:hover {
+  transform: scale(1.02);
+}
+.creationsGridContainer .hide {
+  display: none;
+}
+.creationsGridContainer__cardTitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: hsl(0, 0%, 100%);
+}
+.creationsGridContainer__deepEarth {
   background-image: url(../assets/images/mobile/image-deep-earth.jpg);
   background-size: cover;
   background-size: 100%;
@@ -325,11 +359,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.creationsContainer__deepEarth:hover {
+.creationsGridContainer__deepEarth:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.creationsContainer__nightArcade {
+.creationsGridContainer__nightArcade {
   background-image: url(../assets/images/mobile/image-night-arcade.jpg);
   background-size: cover;
   background-size: 100%;
@@ -337,11 +371,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.creationsContainer__nightArcade:hover {
+.creationsGridContainer__nightArcade:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.creationsContainer__soccerTeam {
+.creationsGridContainer__soccerTeam {
   background-image: url(../assets/images/mobile/image-soccer-team.jpg);
   background-size: cover;
   background-size: 100%;
@@ -349,21 +383,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.creationsContainer__soccerTeam:hover {
+.creationsGridContainer__soccerTeam:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.creationsContainer__extraCards {
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: height 0.7s ease, opacity 0.7s ease;
-}
-.creationsContainer__extraCards--visible {
-  height: auto;
-  opacity: 1;
-}
-.creationsContainer__fromAbove {
+.creationsGridContainer__fromAbove {
   background-image: url(../assets/images/mobile/image-from-above.jpg);
   background-size: cover;
   background-size: 80%;
@@ -371,11 +395,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.creationsContainer__fromAbove:hover {
+.creationsGridContainer__fromAbove:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.creationsContainer__pocket {
+.creationsGridContainer__pocket {
   background-image: url(../assets/images/mobile/image-pocket-borealis.jpg);
   background-size: cover;
   background-size: 100%;
@@ -383,11 +407,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.creationsContainer__pocket:hover {
+.creationsGridContainer__pocket:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.creationsContainer__curiosity {
+.creationsGridContainer__curiosity {
   background-image: url(../assets/images/mobile/image-curiosity.jpg);
   background-size: cover;
   background-size: 100%;
@@ -395,11 +419,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.creationsContainer__curiosity:hover {
+.creationsGridContainer__curiosity:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.creationsContainer__makeIt {
+.creationsGridContainer__makeIt {
   background-image: url(../assets/images/mobile/image-fisheye.jpg);
   background-size: cover;
   background-size: 100%;
@@ -407,32 +431,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.creationsContainer__makeIt:hover {
+.creationsGridContainer__makeIt:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.creationsContainer__card {
-  width: 100%;
-  height: 10rem;
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 2rem;
-  padding-left: 2rem;
-  padding-bottom: 1rem;
-  transition: transform 0.7s ease;
-  background-color: hsl(0, 0%, 0%);
-}
-.creationsContainer__cardTitle {
-  width: 15rem;
-  display: flex;
-  flex-direction: column;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: hsl(0, 0%, 100%);
-}
-.creationsContainer__grid {
+.creationsGridContainer__grid {
   background-image: url(../assets/images/mobile/image-grid.jpg);
   background-size: cover;
   background-size: 100%;
@@ -440,7 +443,7 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.creationsContainer__grid:hover {
+.creationsGridContainer__grid:hover {
   opacity: 1;
   transform: scale(1.02);
 }
@@ -587,6 +590,84 @@ header {
   }
   .navTop_container__slogan:hover {
     width: 35rem;
+  }
+  .cardsContainer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .creationsGridContainer {
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .creationsGridContainer.expanded {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .creationsGridContainer.collapsed {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .creationsGridContainer__cardTitle {
+    width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: hsl(0, 0%, 100%);
+    background-color: hsla(0, 0%, 0%, 0.6);
+    padding: 1rem;
+  }
+  .creationsGridContainer__card {
+    width: 100%;
+    min-height: 15rem;
+    max-height: 30rem;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.7s ease;
+    background-color: hsl(0, 0%, 0%);
+  }
+  .creationsGridContainer__card:hover {
+    transform: scale(1.02);
+  }
+  .creationsGridContainer__deepEarth {
+    background-image: url(../assets/images/desktop/image-deep-earth.jpg);
+    background-size: cover;
+    background-size: 100%;
+  }
+  .creationsGridContainer__nightArcade {
+    background-image: url(../assets/images/desktop/image-night-arcade.jpg);
+    background-size: cover;
+    background-size: 100%;
+  }
+  .creationsGridContainer__soccerTeam {
+    background-image: url(../assets/images/desktop/image-soccer-team.jpg);
+    background-size: cover;
+    background-size: 100%;
+  }
+  .creationsGridContainer__fromAbove {
+    background-image: url(../assets/images/desktop/image-from-above.jpg);
+    background-size: cover;
+    background-size: 80%;
+  }
+  .creationsGridContainer__pocket {
+    background-image: url(../assets/images/desktop/image-pocket-borealis.jpg);
+    background-size: cover;
+    background-size: 100%;
+  }
+  .creationsGridContainer__curiosity {
+    background-image: url(../assets/images/desktop/image-curiosity.jpg);
+    background-size: cover;
+    background-size: 100%;
+  }
+  .creationsGridContainer__makeIt {
+    background-image: url(../assets/images/desktop/image-fisheye.jpg);
+    background-size: cover;
+    background-size: 100%;
+  }
+  .creationsGridContainer__grid {
+    background-image: url(../assets/images/desktop/image-grid.jpg);
+    background-size: cover;
+    background-size: 100%;
   }
   .navBottom_container {
     width: 100%;
