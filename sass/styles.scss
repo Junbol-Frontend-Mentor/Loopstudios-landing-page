@@ -247,7 +247,7 @@ header {
   //=============================================================
 
   //========================================
-
+// ------- MAGIC ----------------------------
   //----------- Animation  ---------------
   @keyframes float {
     0% {
@@ -378,7 +378,7 @@ header {
     @include typography('Josefin Sans', 500, 1rem, 1.5, color('black'));
     transition: transform 0.7s ease;
     //background-color: aqua;
-    &:hover {
+    &:hover , &:focus {
       color: color('white');
       border-radius: 5px;
       background-color: color('fuchsia');
@@ -388,7 +388,7 @@ header {
   }
 }
 
-.gridContainer {
+.creationsContainer {
   &__deepEarth {
     background-image: url(../assets/images/mobile/image-deep-earth.jpg);
     background-size: cover;
@@ -523,7 +523,7 @@ header {
 
 .navBottom_container {
   width: 100%;
-  height: 22rem;
+  height: 24rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -535,17 +535,15 @@ header {
     width: 100%;
     height: auto;
     display: flex;
-    margin: 0 auto;
+    //margin: 0 auto;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     text-align: center;
     //background-color:darkgray;
   }
   &__logoBottom {
     width: 100%;
-    margin-top: 1rem;
     text-align: center;
-    margin: 0 auto;
     margin-bottom: 1rem;
     //background-color: goldenrod;
   }
@@ -588,7 +586,7 @@ header {
     display: flex;
     justify-content: space-between; // White border
     margin-top: 1.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     right: 0;
     //background-color: coral;
   }
@@ -623,7 +621,7 @@ header {
   }
 }
 
-// ------- MAGIC ----------------------------
+
 
 //------   FOOTER    ----------------
 
@@ -645,7 +643,7 @@ header {
   text-decoration: none;
 }
 
-//------ MEDIA QUERY FOR DESKTOPS AND TABLETS ----------------
+
 //------ MEDIA QUERY FOR DESKTOPS AND TABLETS ----------------
 
 @media (min-width: 768px) {
@@ -683,38 +681,31 @@ header {
   }
   .navBottom_container {
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     margin-top: 2rem;
     background-color: color('black');
-    background-color: rgb(80, 38, 80);
     &__logoPlusBottomNav {
-      width: 28rem;
+      width: 100%;
       height: auto;
       display: flex;
-      margin: 0;
-      margin-left: 1rem;
+      //margin: 0 auto;
       flex-direction: column;
       align-items: left;
-      background-color: rgb(112, 94, 94);
+      text-align: left;
+
     }
     &__logoBottom {
-      width: 13rem;
-      //margin-top: 1rem;
+      width: 100%;
       text-align: left;
-      margin: 0;
-      margin-bottom: 0.5rem;
-      background-color: goldenrod;
     }
 
     &__navMenuBottom {
       width: 25rem;
-      height: 3rem;
+      height: 2.5rem;
       display: flex;
-      margin: 0;
-      background-color: rgb(6, 223, 6);
     }
     ul {
       width: 100%;
@@ -723,7 +714,6 @@ header {
       list-style: none;
       justify-content: space-between;
       @include typography('Josefin Sans', 500, 1rem, 2, color('white'));
-      background-color: rgb(78, 82, 78);
       li {
         &:hover {
           color: color('fuchsia');
@@ -732,20 +722,16 @@ header {
     }
     &__socialMediaIcons_container {
       width: 15rem;
-      height: 4rem;
+      height: 3.5rem;
       display: flex;
       flex-direction: column;
-      //align-items: center;
       margin-right: 1rem;
       color: white;
-      background-color: darkgreen;
     }
     &__socialMediaIcons {
       display: flex;
       justify-content: space-between; // White border
-      margin-top: 0.3rem;
-      //margin-bottom: 1rem;
-      //background-color: coral;
+      margin-top: 0rem;
     }
 
     &__link {

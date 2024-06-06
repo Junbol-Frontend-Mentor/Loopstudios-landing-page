@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   mySeeAll.addEventListener('click', function () {
-    myExtraCards.classList.toggle('gridContainer__extraCards--visible');
+    myExtraCards.classList.toggle('creationsContainer__extraCards--visible');
   });
 });

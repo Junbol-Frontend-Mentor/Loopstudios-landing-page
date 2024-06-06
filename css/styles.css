@@ -309,7 +309,7 @@ header {
   color: hsl(0, 0%, 0%);
   transition: transform 0.7s ease;
 }
-.gridTitleContainer__seeAll:hover {
+.gridTitleContainer__seeAll:hover, .gridTitleContainer__seeAll:focus {
   color: hsl(0, 0%, 100%);
   border-radius: 5px;
   background-color: hsl(303, 98%, 51%);
@@ -317,7 +317,7 @@ header {
   border: 3px solid;
 }
 
-.gridContainer__deepEarth {
+.creationsContainer__deepEarth {
   background-image: url(../assets/images/mobile/image-deep-earth.jpg);
   background-size: cover;
   background-size: 100%;
@@ -325,11 +325,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.gridContainer__deepEarth:hover {
+.creationsContainer__deepEarth:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.gridContainer__nightArcade {
+.creationsContainer__nightArcade {
   background-image: url(../assets/images/mobile/image-night-arcade.jpg);
   background-size: cover;
   background-size: 100%;
@@ -337,11 +337,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.gridContainer__nightArcade:hover {
+.creationsContainer__nightArcade:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.gridContainer__soccerTeam {
+.creationsContainer__soccerTeam {
   background-image: url(../assets/images/mobile/image-soccer-team.jpg);
   background-size: cover;
   background-size: 100%;
@@ -349,21 +349,21 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.gridContainer__soccerTeam:hover {
+.creationsContainer__soccerTeam:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.gridContainer__extraCards {
+.creationsContainer__extraCards {
   height: 0;
   opacity: 0;
   overflow: hidden;
   transition: height 0.7s ease, opacity 0.7s ease;
 }
-.gridContainer__extraCards--visible {
+.creationsContainer__extraCards--visible {
   height: auto;
   opacity: 1;
 }
-.gridContainer__fromAbove {
+.creationsContainer__fromAbove {
   background-image: url(../assets/images/mobile/image-from-above.jpg);
   background-size: cover;
   background-size: 80%;
@@ -371,11 +371,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.gridContainer__fromAbove:hover {
+.creationsContainer__fromAbove:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.gridContainer__pocket {
+.creationsContainer__pocket {
   background-image: url(../assets/images/mobile/image-pocket-borealis.jpg);
   background-size: cover;
   background-size: 100%;
@@ -383,11 +383,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.gridContainer__pocket:hover {
+.creationsContainer__pocket:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.gridContainer__curiosity {
+.creationsContainer__curiosity {
   background-image: url(../assets/images/mobile/image-curiosity.jpg);
   background-size: cover;
   background-size: 100%;
@@ -395,11 +395,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.gridContainer__curiosity:hover {
+.creationsContainer__curiosity:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.gridContainer__makeIt {
+.creationsContainer__makeIt {
   background-image: url(../assets/images/mobile/image-fisheye.jpg);
   background-size: cover;
   background-size: 100%;
@@ -407,11 +407,11 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.gridContainer__makeIt:hover {
+.creationsContainer__makeIt:hover {
   opacity: 1;
   transform: scale(1.02);
 }
-.gridContainer__card {
+.creationsContainer__card {
   width: 100%;
   height: 10rem;
   display: flex;
@@ -422,7 +422,7 @@ header {
   transition: transform 0.7s ease;
   background-color: hsl(0, 0%, 0%);
 }
-.gridContainer__cardTitle {
+.creationsContainer__cardTitle {
   width: 15rem;
   display: flex;
   flex-direction: column;
@@ -432,7 +432,7 @@ header {
   line-height: 1;
   color: hsl(0, 0%, 100%);
 }
-.gridContainer__grid {
+.creationsContainer__grid {
   background-image: url(../assets/images/mobile/image-grid.jpg);
   background-size: cover;
   background-size: 100%;
@@ -440,14 +440,14 @@ header {
   background-repeat: no-repeat;
   opacity: 0.5;
 }
-.gridContainer__grid:hover {
+.creationsContainer__grid:hover {
   opacity: 1;
   transform: scale(1.02);
 }
 
 .navBottom_container {
   width: 100%;
-  height: 22rem;
+  height: 24rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -459,16 +459,13 @@ header {
   width: 100%;
   height: auto;
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   text-align: center;
 }
 .navBottom_container__logoBottom {
   width: 100%;
-  margin-top: 1rem;
   text-align: center;
-  margin: 0 auto;
   margin-bottom: 1rem;
 }
 .navBottom_container__navMenuBottom {
@@ -508,7 +505,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 1.7rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   right: 0;
 }
 .navBottom_container__link {
@@ -593,37 +590,29 @@ header {
   }
   .navBottom_container {
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     margin-top: 2rem;
     background-color: hsl(0, 0%, 0%);
-    background-color: rgb(80, 38, 80);
   }
   .navBottom_container__logoPlusBottomNav {
-    width: 28rem;
+    width: 100%;
     height: auto;
     display: flex;
-    margin: 0;
-    margin-left: 1rem;
     flex-direction: column;
     align-items: left;
-    background-color: rgb(112, 94, 94);
+    text-align: left;
   }
   .navBottom_container__logoBottom {
-    width: 13rem;
+    width: 100%;
     text-align: left;
-    margin: 0;
-    margin-bottom: 0.5rem;
-    background-color: goldenrod;
   }
   .navBottom_container__navMenuBottom {
     width: 25rem;
-    height: 3rem;
+    height: 2.5rem;
     display: flex;
-    margin: 0;
-    background-color: rgb(6, 223, 6);
   }
   .navBottom_container ul {
     width: 100%;
@@ -636,24 +625,22 @@ header {
     font-size: 1rem;
     line-height: 2;
     color: hsl(0, 0%, 100%);
-    background-color: rgb(78, 82, 78);
   }
   .navBottom_container ul li:hover {
     color: hsl(303, 98%, 51%);
   }
   .navBottom_container__socialMediaIcons_container {
     width: 15rem;
-    height: 4rem;
+    height: 3.5rem;
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
     color: white;
-    background-color: darkgreen;
   }
   .navBottom_container__socialMediaIcons {
     display: flex;
     justify-content: space-between;
-    margin-top: 0.3rem;
+    margin-top: 0rem;
   }
   .navBottom_container__link {
     width: 30px;
