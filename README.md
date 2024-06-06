@@ -1,14 +1,12 @@
- 
 ## Welcome! 👋
 
 ![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)
-
 
 Thanks for checking out this front-end coding challenge.
 
 # Frontend Mentor - Loopstudios landing page solution
 
-This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -33,8 +31,8 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### Links
 
-- Solution URL: (https://github.com/Junbol-Frontend-Mentor/base-apparel-coming-soon)
-- Live Site URL: (https://junbol-frontend-mentor.github.io/base-apparel-coming-soon/)
+- Solution URL: (https://github.com/Junbol-Frontend-Mentor/loopstudios-landing-page)
+- Live Site URL: (https://junbol-frontend-mentor.github.io/loopstudios-landing-page/)
 
 ## My process
 
@@ -50,13 +48,11 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### What I learned
 
-- How to write gradient variables in SCSS: $gradientOne: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+- Stop using fa-2x to enlarge these icons, use css rules instead
 
--  Remember how to increase the size of the fas : <i class="formContainer__icon fa fa-envelope fa-2x"></i>
+- On divs you need to add tabindex="0"
 
--  Stay away from using nextElementSibling: is not precise enough to target the right html element use querySelector instead
-
-- Dont use the '/' or './" on html absolute paths for images, GitHub dont like it.
+- Be careful your mobile rules don't overide your desktop rules.
 
 ```
 
