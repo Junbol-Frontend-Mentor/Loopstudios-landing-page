@@ -178,25 +178,7 @@ header {
     }
   }
 
-  //----------- Nav Menu Animation ---------------
 
-  .about {
-    animation-name: aboutMenu;
-    animation-duration: 4s;
-    top: 0;
-    z-index: 10;
-    //position: absolute;
-    //background-color: bisque;
-  }
-
-  .careers {
-    animation-name: careersMenu;
-    animation-duration: 4s;
-    z-index: 1;
-    margin-top: 30;
-    //position: absolute;
-    //background-color: darkgoldenrod;
-  }
 
   //----------- Hamburger Icon  ---------------
   &__hamburgerClassIcon {

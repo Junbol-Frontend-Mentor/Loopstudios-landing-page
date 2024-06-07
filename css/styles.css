@@ -133,18 +133,6 @@ header {
 .navTop_container li:hover {
   background-color: hsl(303, 98%, 51%);
 }
-.navTop_container .about {
-  animation-name: aboutMenu;
-  animation-duration: 4s;
-  top: 0;
-  z-index: 10;
-}
-.navTop_container .careers {
-  animation-name: careersMenu;
-  animation-duration: 4s;
-  z-index: 1;
-  margin-top: 30;
-}
 .navTop_container__hamburgerClassIcon {
   margin-top: 0.7rem;
   width: 3rem;
