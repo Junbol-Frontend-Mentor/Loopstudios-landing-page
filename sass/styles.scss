@@ -425,7 +425,6 @@ header {
     @include typography('Josefin Sans', 300, 1.5rem, 1, color('white'));
   }
 
-
   &__deepEarth {
     background-image: url(../assets/images/mobile/image-deep-earth.jpg);
     background-size: cover;
@@ -462,7 +461,6 @@ header {
       transform: scale(1.02);
     }
   }
-
 
   &__fromAbove {
     background-image: url(../assets/images/mobile/image-from-above.jpg);
@@ -513,7 +511,7 @@ header {
       transform: scale(1.02);
     }
   }
-  
+
   &__grid {
     background-image: url(../assets/images/mobile/image-grid.jpg);
     background-size: cover;
@@ -526,10 +524,7 @@ header {
       transform: scale(1.02);
     }
   }
-
 }
-
-
 
 .navBottom_container {
   width: 100%;
@@ -653,9 +648,6 @@ header {
 
 //------ MEDIA QUERY FOR DESKTOPS AND TABLETS ----------------
 
-
-
-
 @media (min-width: 768px) {
   .navTop_container {
     &__navMenu {
@@ -697,19 +689,19 @@ header {
     //margin: 0 auto;
   }
 
-
   //--== Grid Container -------------------------
   .creationsGridContainer {
     justify-content: space-between;
     grid-template-columns: repeat(4, 1fr); // 🟢 Create a grid with 4 columns for desktop
 
-    &.expanded { // 🟢 New class for when all items are shown
+    &.expanded {
+      // 🟢 New class for when all items are shown
       grid-template-columns: repeat(4, 1fr); // 🟢 Maintain the 4-column layout
       //grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); // 🟢 Responsive columns
     }
 
-
-    &.collapsed { // 🟢 New class for when only the first 3 items are shown
+    &.collapsed {
+      // 🟢 New class for when only the first 3 items are shown
       grid-template-columns: repeat(4, 1fr); // 🟢 Use 3 columns for 3 items
     }
 
@@ -748,8 +740,7 @@ header {
       background-size: cover;
       background-size: 100%; // Zoom out the image
     }
-  
-  
+
     &__fromAbove {
       background-image: url(../assets/images/desktop/image-from-above.jpg);
       background-size: cover;
@@ -765,20 +756,19 @@ header {
       background-size: cover;
       background-size: 100%; // Zoom out the image
     }
-  
+
     &__makeIt {
       background-image: url(../assets/images/desktop/image-fisheye.jpg);
       background-size: cover;
       background-size: 100%; // Zoom out the image
     }
-    
+
     &__grid {
       background-image: url(../assets/images/desktop/image-grid.jpg);
       background-size: cover;
       background-size: 100%; // Zoom out the image
     }
   }
-
 
   //----------------------------------------------
 
