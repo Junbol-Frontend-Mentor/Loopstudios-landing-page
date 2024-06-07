@@ -48,11 +48,13 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### What I learned
 
-- Stop using fa-2x to enlarge these icons, use css rules instead
+- Stop using fa-2x to enlarge these icons, use css rules instead.
 
-- On divs you need to add tabindex="0"
+- On divs you need to add tabindex="0".
 
 - Be careful your mobile rules don't overide your desktop rules.
+
+- Working with the Grid was a challenge.
 
 ```
 
